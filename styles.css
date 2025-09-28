@@ -1,8 +1,14 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background : #00e1ff;
+    background : #ffffff;
 }
 
 h1 {
-    font-family: Wingdings, Geneva, Tahoma, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
