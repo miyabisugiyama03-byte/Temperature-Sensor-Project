@@ -6,6 +6,30 @@
 </head>
 <body>
     <h1>Temperature Sensor Project</h1>
+    <h2> DS18B20 Temperature</h2>
+    <p id="temperature"> Loading...</p>
+
+    <script>
+
+        async function fetchTemperature() {
+        try {
+            let response = await fetch("latest_temp.txt?nocache=" + new Date().getTime());
+            let temperature = await response.text();
+            document.getElementById("temperature").innerText = temperature + " ℃";
+        }
+        catch (err) {
+            document.getElementById("temperature").innerText = "Error loading data"
+        }
+
+        }
+
+    fetchTemperature();
+        setInterval(fetchTemperature, 2000);
+
+
+    </script>
+
+
 
 </body>
 </html>
