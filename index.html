@@ -13,7 +13,7 @@
 
         async function fetchTemperature() {
         try {
-            let response = await fetch("latest_temp.txt?nocache=" + new Date().getTime());
+            let response = await fetch("https://temperature-sensor-project.pages.dev/get-temperature");
             let temperature = await response.json();
             document.getElementById("temperature").innerText = temperature + " ℃";
         }
